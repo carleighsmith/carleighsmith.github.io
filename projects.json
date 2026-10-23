@@ -1,0 +1,17 @@
+[
+  {
+    "title": "PawsConn Web Application",
+    "description": "Full-stack web application built with Python and Django featuring relational database modeling, user workflows, and secure CRUD operations.",
+    "tags": ["Python", "Django", "SQLite / SQL", "HTML/CSS", "Full-Stack"],
+    "github": "https://github.com/carleighsmith/pawsconn",
+    "demo": null
+  }
+,
+  {
+  "title": "SavorySweets Recipe Mobile Application",
+  "description": "Cross-platform mobile and desktop recipe application built with .NET MAUI and C#. Implements layered architecture with dedicated data services, recipe filtering, user favorites tracking, and dynamic theming.",
+  "tags": [".NET MAUI", "C#", "XAML", "Mobile Development", "Cross-Platform"],
+  "github": "https://github.com/carleighsmith544/savorysweets",
+  "demo": null
+    }   
+]   

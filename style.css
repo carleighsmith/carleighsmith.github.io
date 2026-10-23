@@ -1,0 +1,424 @@
+:root {
+  /* Refined Soft-Professional Palette */
+  --bg-color: #faf9fb;
+  --card-bg: #ffffff;
+  --text-primary: #2d2633;
+  --text-muted: #6b6375;
+  --primary: #c25983;            /* Sophisticated muted rose */
+  --primary-hover: #a8436c;      /* Deep berry rose */
+  --accent-soft: #f7e8ef;        /* Soft blush */
+  --accent-border: #ebd3de;      /* Subtle border line */
+  --border-light: #ece9ee;       /* Soft neutral card border */
+  --shadow-subtle: 0 4px 20px -2px rgba(194, 89, 131, 0.08), 0 2px 6px -1px rgba(0, 0, 0, 0.04);
+  --shadow-hover: 0 10px 25px -3px rgba(194, 89, 131, 0.15), 0 4px 10px -2px rgba(0, 0, 0, 0.04);
+  --font-stack: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-primary);
+  font-family: var(--font-stack);
+  line-height: 1.65;
+  padding: 0 1.5rem;
+  letter-spacing: -0.01em;
+}
+
+/* Header & Navigation */
+header {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2.5rem 0 1.5rem;
+  border-bottom: 1px solid var(--accent-border);
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav h1 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--primary);
+  letter-spacing: -0.02em;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 1.75rem;
+}
+
+nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+/* Main Content Layout */
+main {
+  max-width: 960px;
+  margin: 3.5rem auto 5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 4.5rem;
+}
+
+section h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+  display: inline-block;
+  position: relative;
+}
+
+section h2::after {
+  content: "";
+  display: block;
+  width: 2rem;
+  height: 3px;
+  background-color: var(--primary);
+  border-radius: 2px;
+  margin-top: 0.35rem;
+}
+
+p {
+  color: var(--text-muted);
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+p strong {
+  color: var(--text-primary);
+}
+
+/* About Section Skills */
+.about-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 1.5rem 0;
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+}
+
+.skill-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--text-muted);
+  margin-bottom: 0.4rem;
+}
+
+/* Badges / Tags */
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+  list-style: none;
+}
+
+.tags li {
+  background-color: var(--accent-soft);
+  color: var(--primary-hover);
+  padding: 0.25rem 0.65rem;
+  border-radius: 6px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid rgba(194, 89, 131, 0.15);
+}
+
+/* Projects Grid */
+#projects-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: 1.75rem;
+}
+
+.project-card {
+  background-color: var(--card-bg);
+  border: 1px solid var(--border-light);
+  border-radius: 12px;
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  box-shadow: var(--shadow-subtle);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--accent-border);
+}
+
+.project-card h3 {
+  font-size: 1.2rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+.project-card p {
+  font-size: 0.92rem;
+  flex-grow: 1;
+  margin-bottom: 1.25rem;
+}
+
+.project-card .tags {
+  margin-bottom: 1.5rem;
+}
+
+/* Action Buttons */
+.project-links {
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.project-links a {
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 600;
+  padding: 0.55rem 1.15rem;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Primary Button */
+.project-links a:first-child {
+  background-color: var(--primary);
+  color: #ffffff;
+}
+
+.project-links a:first-child:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Secondary Button */
+.project-links a:nth-child(2) {
+  background-color: transparent;
+  color: var(--primary);
+  border: 1px solid var(--accent-border);
+}
+
+.project-links a:nth-child(2):hover {
+  background-color: var(--accent-soft);
+}
+
+/* About Section Skills Layout */
+.about-skills {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin: 1.25rem 0;
+}
+
+.skill-group strong {
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 0.35rem;
+}
+
+.skill-group .tags {
+  margin-bottom: 0.5rem;
+}
+
+/* Contact Section Layout */
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+.contact-cards {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-card {
+  background: #ffffff;
+  padding: 1rem 1.25rem;
+  border-radius: 10px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-subtle);
+}
+
+.contact-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: var(--primary);
+  margin-bottom: 0.25rem;
+}
+
+.contact-link,
+.contact-text {
+  color: var(--text-primary);
+  font-size: 0.95rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.contact-link:hover {
+  color: var(--primary-hover);
+  text-decoration: underline;
+}
+
+/* Contact Form */
+.contact-form {
+  background: #ffffff;
+  padding: 1.5rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-subtle);
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  border-radius: 8px;
+  border: 1px solid var(--border-light);
+  font-family: inherit;
+  font-size: 0.95rem;
+  color: var(--text-primary);
+  background-color: var(--bg-color);
+  transition: border-color 0.2s ease, outline 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  background-color: #ffffff;
+}
+
+.submit-btn {
+  background-color: var(--primary);
+  color: #ffffff;
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: none;
+  padding: 0.7rem 1.25rem;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  align-self: flex-start;
+}
+
+.submit-btn:hover {
+  background-color: var(--primary-hover);
+}
+
+/* Base Button Styling */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.4rem;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+/* Primary Filled Style (Solid Rose-Champagne Accent) */
+.btn-primary {
+  background-color: var(--primary, #b76e79);
+  color: #ffffff;
+  border: 1px solid var(--primary, #b76e79);
+  box-shadow: 0 4px 12px rgba(183, 110, 121, 0.2);
+}
+
+.btn-primary:hover {
+  background-color: var(--primary-hover, #a35d68);
+  border-color: var(--primary-hover, #a35d68);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(183, 110, 121, 0.3);
+}
+
+.btn-primary:active {
+  transform: translateY(0);
+}
+
+/* Outline Style (Subtle & Elegant Alternative) */
+.btn-outline {
+  background-color: transparent;
+  color: var(--primary, #b76e79);
+  border: 1.5px solid var(--primary, #b76e79);
+}
+
+.btn-outline:hover {
+  background-color: rgba(183, 110, 121, 0.08);
+  color: var(--primary-hover, #a35d68);
+  border-color: var(--primary-hover, #a35d68);
+  transform: translateY(-2px);
+}
+
+.btn-outline:active {
+  transform: translateY(0);
+}
+
+/* Optional: Mini Download Icon Sizing */
+.btn svg {
+  width: 1.1rem;
+  height: 1.1rem;
+  transition: transform 0.2s ease;
+}
+
+.btn:hover svg {
+  transform: translateY(1px);
+}

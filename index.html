@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Portfolio</title>
+
+  <!-- Content Security Policy for safety -->
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self'; img-src 'self' data: https:;">
+
+  <!-- Link CSS stylesheet -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <h1>My Portfolio</h1>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+      <a href="assets/Carleigh_Smith_Resume.pdf" class="btn btn-primary" download>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" d="M3 16.5v2.25A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75V16.5M16.5 12L12 16.5m0 0L7.5 12m4.5 4.5V3" />
+        </svg>
+        Download Resume
+      </a>
+  </header>
+
+  <main>
+    <section id="about">
+      <h2>About Me</h2>
+      
+      <p>
+        Hi, I’m <strong>Carleigh Smith</strong>.
+      </p>
+      
+      <p>
+        I bridge the gap between <strong>software engineering</strong> and <strong>enterprise systems administration</strong>. With hands-on internship experience resolving complex technical workflows at <strong>Jones Capital</strong> and managing district-wide asset deployments for the <strong>Biloxi School District</strong>, I understand how software interacts directly with physical and cloud infrastructure.
+      </p>
+
+      <!-- Skills Matrix -->
+      <div class="about-skills">
+        <div class="skill-group">
+          <span class="skill-label">Languages</span>
+          <ul class="tags">
+            <li>Python</li>
+            <li>Java</li>
+            <li>C++</li>
+            <li>C#</li>
+            <li>JavaScript</li>
+            <li>SQL</li>
+          </ul>
+        </div>
+        
+        <div class="skill-group">
+          <span class="skill-label">Frameworks &amp; Databases</span>
+          <ul class="tags">
+            <li>Django</li>
+            <li>Spring Boot</li>
+            <li>MySQL</li>
+            <li>MS SQL Server</li>
+          </ul>
+        </div>
+
+        <div class="skill-group">
+          <span class="skill-label">Systems &amp; Tools</span>
+          <ul class="tags">
+            <li>Git</li>
+            <li>Google Workspace Admin</li>
+            <li>GAM</li>
+            <li>Wireshark</li>
+          </ul>
+        </div>
+      </div>
+
+      <p>
+        I combine rigorous technical discipline (<strong>4.0 GPA</strong>, Phi Theta Kappa) with clear communication and team leadership honed in retail management. I am actively seeking <strong>Software Engineering</strong> and <strong>Database Developer</strong> internship opportunities.
+      </p>
+
+      <!-- Quick Action Buttons -->
+      <div class="project-links">
+        <a href="assets/Carleigh Smith - Technology Resume.pdf" target="_blank" rel="noopener noreferrer">View Resume</a>
+        <a href="https://linkedin.com/in/carleigh-smith-a80383300" target="_blank" rel="noopener noreferrer">Connect on LinkedIn</a>
+      </div>
+    </section>
+
+    <section id="projects">
+      <h2>Featured Projects</h2>
+      <!-- JavaScript will inject your project cards here -->
+      <div id="projects-container"></div>
+    </section>
+
+   <section id="contact">
+  <h2>Get In Touch</h2>
+  <p>
+    I am actively seeking <strong>Software Engineering</strong> and <strong>Database Developer</strong> internship opportunities. Whether you have an open role, a question about my projects, or just want to connect, feel free to reach out!
+  </p>
+
+  <div class="contact-wrapper">
+    <!-- Contact Info Cards -->
+    <div class="contact-cards">
+      <div class="contact-card">
+        <span class="contact-label">Email</span>
+        <a href="mailto:carleigh.m.smith@gmail.com" class="contact-link">carleigh.m.smith@gmail.com</a>
+      </div>
+
+      <div class="contact-card">
+        <span class="contact-label">LinkedIn</span>
+        <a href="https://linkedin.com/in/carleigh-smith-a80383300" target="_blank" rel="noopener noreferrer" class="contact-link">linkedin.com/in/carleigh-smith</a>
+      </div>
+
+      <div class="contact-card">
+        <span class="contact-label">GitHub</span>
+        <a href="https://github.com/carleighsmith" target="_blank" rel="noopener noreferrer" class="contact-link">github.com/carleighsmith</a>
+      </div>
+
+      <div class="contact-card">
+        <span class="contact-label">Location</span>
+        <span class="contact-text">Hattiesburg, MS (Open to Relocation / Remote)</span>
+      </div>
+    </div>
+
+    <!-- Contact Form (Optional, powered by Formspree) -->
+    <form class="contact-form" action="https://formspree.io/f/your-form-id" method="POST">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Your Name" required>
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Your Email" required>
+      </div>
+
+      <div class="form-group">
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="4" placeholder="Your Message..." required></textarea>
+      </div>
+
+      <button type="submit" class="submit-btn">Send Message</button>
+    </form>
+  </div>
+</section>
+  </main>
+
+  <!-- Link JavaScript file at the end of body -->
+  <script src="script.js"></script>
+
+  <footer>
+  <p>&copy; 2026 Carleigh Smith. Built with HTML, CSS, & JavaScript.</p>
+</footer>
+
+</body>
+</html>
